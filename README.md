@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Simple app made using React, and firebase, where You can add quotes, see information about added quotes etc.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
