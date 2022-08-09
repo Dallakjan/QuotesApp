@@ -5,7 +5,7 @@ import classes from './MainNavigation.module.css';
 const MainNavigation = () => {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>Quotes</div>
+      <div className={classes.logo}>Great Quotes</div>
       <nav className={classes.nav}>
         <ul>
           <li>
@@ -15,7 +15,7 @@ const MainNavigation = () => {
           </li>
           <li>
             <NavLink to='/new-quote' activeClassName={classes.active}>
-              Add Quotes
+              Add a Quote
             </NavLink>
           </li>
         </ul>
