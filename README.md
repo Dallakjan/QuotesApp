@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
-Simple app made using React, and firebase, where You can add quotes, see information about added quotes etc.
+Simple app made using React, and firebase, where You can add quotes, see information about added quotes, added validation
+
+#todo add form validation and modals for better UX
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -70,5 +72,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # react
+
 # QuotesApp

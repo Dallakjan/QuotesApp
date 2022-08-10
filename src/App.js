@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import AllQuotes from './pages/AllQuotes';
 import Layout from './components/layout/Layout';
 import LoadingSpinner from './components/UI/LoadingSpinner';
+import AuthForm from './components/auth/AuthForm';
 
 const NewQuote = React.lazy(() => import('./pages/NewQuote'));
 const QuoteDetail = React.lazy(() => import('./pages/QuoteDetail'));
@@ -21,7 +22,7 @@ function App() {
       >
         <Switch>
           <Route path='/' exact>
-            <Redirect to='/quotes' />
+            <AuthForm />
           </Route>
           <Route path='/quotes' exact>
             <AllQuotes />
