@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import React, { Suspense } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
@@ -5,12 +6,15 @@ import AllQuotes from './pages/AllQuotes';
 import Layout from './components/layout/Layout';
 import LoadingSpinner from './components/UI/LoadingSpinner';
 import AuthForm from './components/auth/AuthForm';
+import AuthContext from './store/auth-context';
+import UserProfile from './components/profile/UserProfile';
 
 const NewQuote = React.lazy(() => import('./pages/NewQuote'));
 const QuoteDetail = React.lazy(() => import('./pages/QuoteDetail'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 
 function App() {
+  const authCtx = useContext(AuthContext);
   return (
     <Layout>
       <Suspense
@@ -33,7 +37,11 @@ function App() {
           <Route path='/new-quote'>
             <NewQuote />
           </Route>
-          <Route path='*'>
+          <Route path='/profile'>
+          {authCtx.isLoggedIn && <UserProfile />}
+          {!authCtx.isLoggedIn && <Redirect to='/auth' />}
+        </Route>
+        <Route path='*'>
             <NotFound />
           </Route>
         </Switch>

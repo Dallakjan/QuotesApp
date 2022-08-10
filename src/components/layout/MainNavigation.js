@@ -37,7 +37,7 @@ const MainNavigation = () => {
           )}
           {isLoggedIn && (
             <li>
-              <NavLink to='/new-quote' activeClassName={classes.active}>
+              <NavLink to='/profile' activeClassName={classes.active}>
                 Profile
               </NavLink>
             </li>
