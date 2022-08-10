@@ -9,6 +9,11 @@ const MainNavigation = () => {
 
   const isLoggedIn = authCtx.isLoggedIn;
 
+  const logoutHandler = () => {
+    authCtx.logout();
+    // optional: redirect the user
+  };
+
   return (
     <header className={classes.header}>
       <div className={classes.logo}>Great Quotes</div>
@@ -44,9 +49,7 @@ const MainNavigation = () => {
           )}
           {isLoggedIn && (
             <li>
-              <NavLink to='/new-quote' activeClassName={classes.active}>
-                Logout
-              </NavLink>
+              <button onClick={logoutHandler}>Logout</button>
             </li>
           )}
         </ul>
